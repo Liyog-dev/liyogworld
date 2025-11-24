@@ -1,1 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- --- OPEN GRAPH / SHARING META TAGS --- -->
+    <meta property="og:title" content="Liyog 2025: Divine Blessings & Wishes" />
+    <meta property="og:description" content="Liyog Wishes You The Best Ever. Receive a fresh blessing for your new week." />
+    <meta property="og:image" content="https://snwwlewjriuqrodpjhry.supabase.co/storage/v1/object/public/product-images/1762505524081_n8slt5f0ycg_1761942958176.jpg" />
+    <meta property="og:url" content="https://liyog-dev.github.io" />
+    <meta property="og:type" content="website" />
+
+    <title>Liyog 2025 Blessings | LiyX Tech</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&family=Playfair+Display:ital,wght@0,600;1,600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- TAILWIND CONFIGURATION -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        liyog: {
+                            green: '#28A428',
+                            gold: '#ffd700',
+                            orange: '#ff7a00',
+                        },
+                    },
+                    animation: {
+                        'shine': 'shine 3s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'border-flow': 'borderFlow 4s ease infinite',
+                        'flame': 'flame 0.5s ease-in-out infinite alternate',
+                        'beam': 'beam 2s infinite',
+                    },
+                    keyframes: {
+                        shine: {
+                            '0%': { backgroundPosition: '200% center' },
+                            '100%': { backgroundPosition: '-200% center' },
+                        },
+                        borderFlow: {
+                            '0%, 100%': { borderColor: '#f9ab00' },
+                            '50%': { borderColor: '#ea4335' },
+                        },
+                        flame: {
+                            '0%': { transform: 'scale(1)', opacity: '0.8' },
+                            '100%': { transform: 'scale(1.1)', opacity: '1' },
+                        },
+                        beam: {
+                            '0%': { boxShadow: '0 0 10px #137333' },
+                            '50%': { boxShadow: '0 0 30px #f9ab00, 0 0 60px #ea4335' },
+                            '100%': { boxShadow: '0 0 10px #137333' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* --- GLOBAL STYLES --- */
+        body {
+            background-color: #f0f2f5; /* Facebook-like background gray */
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* --- 2025 Banner --- */
+        .banner-2025 {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            letter-spacing: 0.3rem;
+        }
+
+        /* --- Wrapped Banner Effects --- */
+        .layer-front {
+            background: linear-gradient(135deg, #188038 0%, #1a73e8 100%);
+            border: 3px solid #fbbc04;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* AI Text Shimmer */
+        .ai-text {
+            background: linear-gradient(to right, #ffffff 20%, #ffd700 40%, #ffd700 60%, #ffffff 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shine 3s linear infinite;
+        }
+
+        /* --- Magic Pen (Fixed) --- */
+        .magic-pen-container {
+            position: fixed;
+            right: 15px;
+            top: 55%;
+            transform: translateY(-50%);
+            z-index: 60;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            pointer-events: none;
+        }
+        
+        .magic-pen-interactive {
+            pointer-events: auto;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pen-body {
+            width: 12px;
+            height: 100px;
+            background: linear-gradient(to bottom, #333, #000);
+            border-radius: 4px;
+            border: 1px solid #555;
+        }
+
+        .pen-bottom {
+            width: 35px;
+            height: 12px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #fbbc04, #ea4335, #137333);
+            margin-top: -6px;
+            animation: beam 1.5s infinite;
+            z-index: -1;
+            filter: blur(4px);
+        }
+
+        .pen-tip-fire {
+            width: 20px;
+            height: 20px;
+            margin-bottom: -4px;
+            color: #ea4335;
+            filter: drop-shadow(0 0 5px #fbbc04);
+            animation: flame 0.2s infinite alternate;
+            z-index: 2;
+        }
+
+        /* --- EDGE TO EDGE PRAYER CARD --- */
+        .prayer-container {
+            background: linear-gradient(45deg, #f9ab00, #ea4335, #f9ab00);
+            background-size: 200% 200%;
+            animation: borderFlow 4s ease infinite;
+            /* No padding here, padding is handled by inner content or border width logic */
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
+        }
+
+        .prayer-inner {
+            background-color: #137333;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /* --- Modals --- */
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+
+        .bottom-sheet {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @media (max-width: 768px) {
+            .magic-pen-container {
+                right: 5px;
+                transform: scale(0.8) translateY(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen font-sans">
+
+    <!-- 1. STICKY TOP BANNER -->
+    <div class="banner-2025 w-full py-3 text-center sticky top-0 z-50 shadow-lg border-b border-white/10">
+        <h2 class="text-3xl font-black animate-pulse-slow tracking-widest">2025</h2>
+    </div>
+
+    <!-- 2. HERO: TEXT AREA (Padded) -->
+    <div class="w-full max-w-5xl mx-auto pt-6 px-4 pb-4 relative z-10 text-center">
+        <!-- Card Front -->
+        <div class="layer-front py-6 px-4 rounded-xl inline-block relative overflow-hidden group shadow-lg">
+            <!-- Background Texture -->
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+            
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
+                <span class="ai-text block">Liyog Wishes You</span>
+                <span class="text-white drop-shadow-md block mt-1">The Best Ever</span>
+            </h1>
+        </div>
+    </div>
+
+    <!-- 3. FEATURE IMAGE (FACEBOOK FEED STYLE - EDGE TO EDGE) -->
+    <!-- Removed all padding, borders, and rounded corners for pure edge-to-edge -->
+    <div class="w-full relative z-0 mb-8 bg-black group">
+        
+        <img 
+            src="https://snwwlewjriuqrodpjhry.supabase.co/storage/v1/object/public/product-images/1762505524081_n8slt5f0ycg_1761942958176.jpg" 
+            alt="Liyog Blessings Feature" 
+            class="w-full h-auto object-cover max-h-[75vh] block transition duration-700 brightness-95 group-hover:brightness-105"
+            onerror="this.onerror=null;this.src='https://placehold.co/1200x600/137333/ffffff?text=Liyog+Blessings'"
+        />
+
+        <!-- Subtle Gradient Overlay at bottom for text visibility -->
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 to-transparent pointer-events-none"></div>
+
+        <!-- Watermark/Brand Overlay -->
+        <div class="absolute bottom-4 left-4 md:bottom-8 md:left-8 text-white z-10 flex items-center gap-2">
+            <div class="bg-green-600/90 backdrop-blur-sm p-2 rounded-lg shadow-lg">
+                <i class="fab fa-whatsapp text-white text-xl"></i> 
+            </div>
+            <div>
+                <p class="font-bold text-lg md:text-xl text-shadow font-sans leading-none">LiyX Tech</p>
+                <p class="text-xs text-gray-300 font-light uppercase tracking-wider">Official Media</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 4. CONTROLS AREA -->
+    <main class="flex-grow w-full flex flex-col items-center">
+
+        <!-- Controls Wrapper -->
+        <div class="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 mb-8 px-4 relative z-20">
+            
+            <!-- Month Indicator -->
+            <div class="relative bg-red-600 text-white px-8 py-3 rounded-full font-extrabold text-lg md:text-xl flex items-center gap-3 animate-flame shadow-xl select-none cursor-default">
+                <i class="fas fa-fire animate-pulse text-yellow-300"></i>
+                November Edition
+            </div>
+
+            <!-- Monthly Blessings Button -->
+            <button id="monthlyBlessingsBtn" class="relative group p-[2px] rounded-xl transition-all duration-300 hover:scale-105 shadow-xl">
+                <div class="absolute inset-0 bg-gradient-to-r from-green-500 via-yellow-500 to-red-500 rounded-xl animate-spin-slow opacity-75 group-hover:opacity-100 blur-sm"></div>
+                <div class="relative bg-white rounded-xl p-3 px-6 flex flex-col items-center justify-center font-black text-xl tracking-tighter leading-none min-w-[200px]">
+                    <div class="flex space-x-0.5">
+                        <span class="text-blue-600">M</span><span class="text-orange-500">O</span><span class="text-red-500">N</span><span class="text-green-600">T</span><span class="text-yellow-500">H</span><span class="text-purple-600">L</span><span class="text-pink-600">Y</span>
+                    </div>
+                    <div class="flex space-x-0.5 mt-1 text-sm text-gray-400 font-bold uppercase tracking-widest">
+                        Blessings
+                    </div>
+                </div>
+            </button>
+        </div>
+
+        <!-- 5. PRAYER SECTION (EDGE TO EDGE FULL WIDTH) -->
+        <!-- Logic: w-full. No rounded corners on mobile to be truly edge-to-edge. Padding only inside. -->
+        <div class="w-full md:px-4 md:mb-12"> <!-- Desktop gets padding, mobile is flush -->
+            
+            <!-- The Animated Border Container -->
+            <!-- p-[4px] creates the border thickness using the background gradient -->
+            <div class="prayer-container w-full p-[4px] md:rounded-3xl rounded-none">
+                
+                <div class="prayer-inner w-full flex flex-col py-10 px-6 md:p-16 text-center md:rounded-[1.3rem] rounded-none">
+                    
+                    <!-- Topic Selectors -->
+                    <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-10 z-10">
+                        <button onclick="changePrayer('new_week')" class="bg-white/10 hover:bg-yellow-400 hover:text-green-900 text-white border border-white/20 px-4 py-2 rounded-full text-xs md:text-sm font-bold backdrop-blur-md transition-all uppercase tracking-wide">New Week</button>
+                        <button onclick="changePrayer('monday')" class="bg-white/10 hover:bg-yellow-400 hover:text-green-900 text-white border border-white/20 px-4 py-2 rounded-full text-xs md:text-sm font-bold backdrop-blur-md transition-all uppercase tracking-wide">Monday</button>
+                        <button onclick="changePrayer('business')" class="bg-white/10 hover:bg-yellow-400 hover:text-green-900 text-white border border-white/20 px-4 py-2 rounded-full text-xs md:text-sm font-bold backdrop-blur-md transition-all uppercase tracking-wide">Business</button>
+                        <button onclick="changePrayer('family')" class="bg-white/10 hover:bg-yellow-400 hover:text-green-900 text-white border border-white/20 px-4 py-2 rounded-full text-xs md:text-sm font-bold backdrop-blur-md transition-all uppercase tracking-wide">Family</button>
+                    </div>
+
+                    <!-- Content -->
+                    <div id="prayer-content" class="flex-grow flex flex-col justify-center items-center transition-all duration-500 ease-in-out">
+                        <h2 id="prayer-title" class="text-4xl md:text-7xl font-serif font-bold mb-6 text-white leading-none drop-shadow-xl">
+                            Happy<br/><span class="text-yellow-300 italic">New Week</span>
+                        </h2>
+
+                        <p id="prayer-body" class="text-lg md:text-3xl font-sans font-light leading-relaxed text-gray-50 max-w-5xl mx-auto">
+                            "May this week bring you uncommon victories. Where others see walls, may you see <span class="font-bold text-white border-b-2 border-yellow-400">doors</span>. May your efforts be crowned with success that speaks for itself."
+                        </p>
+
+                        <div class="mt-10 p-6 md:p-8 border-l-4 border-yellow-400 bg-black/20 text-left max-w-3xl backdrop-blur-sm w-full mx-auto">
+                            <p class="text-lg md:text-2xl italic text-gray-200">
+                                <span id="prayer-closing">You are stepping into a realm of ease and abundance.</span>
+                                <span class="block mt-3 text-3xl font-bold text-yellow-300 not-italic font-serif">Amen.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Footer Actions -->
+                    <div class="mt-12 flex flex-col md:flex-row gap-4 justify-center items-center z-10 w-full max-w-lg mx-auto">
+                        <button onclick="copyPrayer()" class="w-full md:w-auto bg-white text-green-900 hover:bg-yellow-300 font-bold py-4 px-10 rounded-full shadow-lg text-lg flex items-center justify-center gap-3 transition transform active:scale-95">
+                            <i class="fas fa-copy"></i> Copy Prayer
+                        </button>
+                        <button onclick="sharePrayer()" class="w-full md:w-auto bg-transparent border-2 border-white/50 text-white hover:bg-white hover:text-green-900 font-bold py-4 px-10 rounded-full shadow-lg text-lg flex items-center justify-center gap-3 transition transform active:scale-95">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 6. ANIMATED PEN (Fixed Right) -->
+    <div class="magic-pen-container">
+        <div class="magic-pen-interactive" onclick="toggleModal('servicesModal', true)">
+            <svg class="pen-tip-fire" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C8 4 4 8 4 12s4 12 8 12 8-8 8-12S16 4 12 0zm0 18c-1.5 0-3-1.5-3-3s2-4 3-6 3 4 3 6-1.5 3-3 3z"/>
+            </svg>
+            <div class="pen-body shadow-2xl"></div>
+            <div class="pen-bottom"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-12 px-4 text-center border-t border-gray-200 relative z-50">
+        <div class="flex justify-center gap-3 mb-6">
+            <div class="w-2 h-2 rounded-full bg-[#4285F4]"></div>
+            <div class="w-2 h-2 rounded-full bg-[#EA4335]"></div>
+            <div class="w-2 h-2 rounded-full bg-[#FBBC05]"></div>
+            <div class="w-2 h-2 rounded-full bg-[#34A853]"></div>
+        </div>
+        
+        <div class="flex flex-col items-center gap-4">
+            <p class="text-gray-600 font-medium">
+                Developer Credit: 
+                <button onclick="toggleModal('servicesModal', true)" class="text-[#4285F4] font-bold hover:underline hover:text-[#EA4335] transition">
+                    LiyX Tech
+                </button>
+            </p>
+            
+            <a href="https://wa.me/2347038268136" target="_blank" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3 rounded-full font-bold hover:bg-[#128C7E] transition shadow-lg animate-bounce hover:animate-none transform hover:scale-105">
+                <i class="fab fa-whatsapp text-2xl"></i> Chat +234 703 826 8136
+            </a>
+        </div>
+        
+        <p class="text-gray-400 text-xs mt-8">© 2025 Liyog. All Rights Reserved.</p>
+    </footer>
+
+    <!-- MODAL 1: LIYX TECH SERVICES -->
+    <div id="servicesModal" class="fixed inset-0 z-[100] hidden">
+        <div class="absolute inset-0 modal-overlay" onclick="toggleModal('servicesModal', false)"></div>
+        <div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-[2.5rem] p-8 md:p-12 shadow-[0_-20px_60px_rgba(0,0,0,0.3)] transform translate-y-full bottom-sheet">
+            <div class="w-16 h-1.5 bg-gray-300 rounded-full mx-auto mb-8"></div>
+            
+            <div class="text-center mb-8">
+                <h3 class="text-3xl font-black text-gray-800 mb-2">LiyX Tech <span class="text-[#4285F4]">Solutions</span></h3>
+                <p class="text-gray-500">Transforming Ideas into Digital Reality</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                <!-- Service Items -->
+                <div class="bg-blue-50 p-4 rounded-2xl text-center border border-blue-100 hover:shadow-md transition"><i class="fas fa-code text-2xl text-blue-500 mb-2"></i><p class="font-bold text-gray-700">Full Stack</p></div>
+                <div class="bg-green-50 p-4 rounded-2xl text-center border border-green-100 hover:shadow-md transition"><i class="fas fa-mobile-alt text-2xl text-green-500 mb-2"></i><p class="font-bold text-gray-700">Mobile Apps</p></div>
+                <div class="bg-yellow-50 p-4 rounded-2xl text-center border border-yellow-100 hover:shadow-md transition"><i class="fas fa-paint-brush text-2xl text-yellow-500 mb-2"></i><p class="font-bold text-gray-700">Web Design</p></div>
+                <div class="bg-red-50 p-4 rounded-2xl text-center border border-red-100 hover:shadow-md transition"><i class="fas fa-server text-2xl text-red-500 mb-2"></i><p class="font-bold text-gray-700">Backend API</p></div>
+                <div class="bg-purple-50 p-4 rounded-2xl text-center border border-purple-100 hover:shadow-md transition"><i class="fas fa-briefcase text-2xl text-purple-600 mb-2"></i><p class="font-bold text-gray-700">Business</p></div>
+                <div class="bg-pink-50 p-4 rounded-2xl text-center border border-pink-100 hover:shadow-md transition"><i class="fas fa-newspaper text-2xl text-pink-500 mb-2"></i><p class="font-bold text-gray-700">Blogs</p></div>
+            </div>
+
+            <div class="flex flex-col gap-3">
+                <a href="https://wa.me/2347038268136?text=Hello%20LiyX%20Tech,%20I%20need%20a%20project." class="w-full bg-[#25D366] text-white font-bold py-4 rounded-xl text-center text-lg hover:brightness-110 transition shadow-lg">
+                    <i class="fab fa-whatsapp mr-2"></i> Start a Project
+                </a>
+                <button onclick="toggleModal('servicesModal', false)" class="w-full bg-gray-100 text-gray-600 font-bold py-4 rounded-xl text-center hover:bg-gray-200 transition">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: MONTHLY BLESSINGS -->
+    <div id="monthlyBlessingsModal" class="fixed inset-0 z-[105] hidden">
+        <div class="absolute inset-0 modal-overlay" onclick="toggleModal('monthlyBlessingsModal', false)"></div>
+        <div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-[2.5rem] p-8 md:p-12 shadow-2xl transform translate-y-full bottom-sheet">
+            <div class="w-16 h-1.5 bg-gray-300 rounded-full mx-auto mb-8"></div>
+            
+            <div class="text-center mb-8">
+                <h3 id="monthlyBlessingTitle" class="text-3xl font-black text-green-700 mb-4">Monthly Blessings</h3>
+                <div class="bg-green-50 p-6 rounded-2xl border border-green-100">
+                    <p id="monthlyBlessingBody" class="text-gray-700 text-lg leading-relaxed font-medium">
+                        "May this month shower you with abundance, joy, and unstoppable breakthroughs. Open your heart and receive divine favor in every area of your life. The difficult days are behind you."
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-3">
+                <button onclick="shareMonthlyBlessing()" class="w-full bg-green-600 text-white font-bold py-4 rounded-xl text-center hover:brightness-110 transition shadow-lg">
+                    <i class="fas fa-share-alt mr-2"></i> Share Blessing
+                </button>
+                <button onclick="toggleModal('monthlyBlessingsModal', false)" class="w-full bg-gray-100 text-gray-600 font-bold py-4 rounded-xl text-center hover:bg-gray-200 transition">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-24 left-1/2 transform -translate-x-1/2 bg-gray-900/90 backdrop-blur-md text-white px-6 py-3 rounded-full shadow-2xl transition-all duration-300 opacity-0 translate-y-10 pointer-events-none flex items-center gap-3 z-[200]">
+        <i class="fas fa-check-circle text-green-400 text-xl"></i>
+        <span id="toastMsg" class="font-medium text-sm">Success!</span>
+    </div>
+
+    <!-- LOGIC -->
+    <script>
+        // --- DATA STORE ---
+        const prayers = {
+            new_week: {
+                title: "Happy<br/><span class='text-yellow-300 italic'>New Week</span>",
+                body: "\"May this week bring you uncommon victories. Where others see walls, may you see <span class='font-bold text-white border-b-2 border-yellow-400'>doors</span>. May your efforts be crowned with success that speaks for itself.\"",
+                closing: "You are stepping into a realm of ease and abundance."
+            },
+            monday: {
+                title: "Blessed<br/><span class='text-yellow-300 italic'>Monday</span>",
+                body: "\"As the sun rises this Monday, may your hope rise with it. May clarity replace confusion, and may speed replace stagnation. This is the day the Lord has made; you shall rejoice in it.\"",
+                closing: "Go forth and conquer. Your path is cleared."
+            },
+            business: {
+                title: "Business<br/><span class='text-yellow-300 italic'>Breakthrough</span>",
+                body: "\"May your business attract kings and queens. May your ideas find fertile ground, and may resources flow to you from the North, South, East, and West. Profit is your portion.\"",
+                closing: "Expansion is happening for you right now."
+            },
+            family: {
+                title: "Family<br/><span class='text-yellow-300 italic'>Peace</span>",
+                body: "\"May the hedge of protection surround your home. May laughter never cease from your mouth, and may sickness be far from your dwelling. Unity and love shall bind you together.\"",
+                closing: "Your household is blessed beyond measure."
+            }
+        };
+
+        // --- CONSOLIDATED MODAL LOGIC ---
+        function toggleModal(modalId, show) {
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
+            
+            const sheet = modal.querySelector('.bottom-sheet');
+            
+            if (show) {
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    sheet.classList.remove('translate-y-full');
+                }, 10);
+            } else {
+                sheet.classList.add('translate-y-full');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        // --- PRAYER CHANGING LOGIC ---
+        function changePrayer(type) {
+            const content = document.getElementById('prayer-content');
+            const pData = prayers[type];
+            
+            if (!pData) return;
+
+            content.style.opacity = '0';
+            content.style.transform = 'translateY(10px)';
+            
+            setTimeout(() => {
+                document.getElementById('prayer-title').innerHTML = pData.title;
+                document.getElementById('prayer-body').innerHTML = pData.body;
+                document.getElementById('prayer-closing').innerText = pData.closing;
+                
+                updateOpenGraph(
+                    `Liyog 2025 - ${type.replace("_", " ").toUpperCase()}`,
+                    pData.body.replace(/<[^>]*>?/gm, "")
+                );
+
+                content.style.opacity = '1';
+                content.style.transform = 'translateY(0)';
+            }, 500);
+        }
+
+        // --- OG TAG UPDATER ---
+        function updateOpenGraph(title, description) {
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            const ogDesc = document.querySelector('meta[property="og:description"]');
+            if (ogTitle) ogTitle.setAttribute("content", title);
+            if (ogDesc) ogDesc.setAttribute("content", description);
+        }
+
+        // --- COPY & SHARE ---
+        function copyPrayer() {
+            const body = document.getElementById('prayer-body').innerText;
+            const closing = document.getElementById('prayer-closing').innerText;
+            const textToCopy = `${body}\n\n${closing}\n\n- Liyog Wishes 2025`;
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                showToast("Prayer copied to clipboard!");
+            });
+        }
+
+        function sharePrayer() {
+            const title = document.getElementById('prayer-title').innerText.replace(/\n/g, " ");
+            const body = document.getElementById('prayer-body').innerText;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Liyog 2025 Blessings',
+                    text: `${title}\n\n${body}\n\nCheck it out here:`,
+                    url: window.location.href,
+                }).catch(err => console.log('Share dismissed', err));
+            } else {
+                copyPrayer();
+                showToast("Link & Text copied (Sharing unsupported)");
+            }
+        }
+
+        function shareMonthlyBlessing() {
+            const title = document.getElementById('monthlyBlessingTitle').innerText;
+            const body = document.getElementById('monthlyBlessingBody').innerText;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Liyog Monthly Blessings',
+                    text: `${title}\n\n${body}\n\nReceived from Liyog 2025:`,
+                    url: window.location.href,
+                }).catch(err => console.log('Share dismissed', err));
+            } else {
+                navigator.clipboard.writeText(`${title}\n\n${body}\n\n- Liyog 2025`);
+                showToast("Monthly blessing copied!");
+            }
+        }
+
+        // --- TOAST NOTIFICATION ---
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            
+            toastMsg.innerText = message;
+            toast.classList.remove('opacity-0', 'translate-y-10');
+            
+            if (window.toastTimeout) clearTimeout(window.toastTimeout);
+            
+            window.toastTimeout = setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-10');
+            }, 3000);
+        }
+
+        // --- INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const monthlyBtn = document.getElementById('monthlyBlessingsBtn');
+            if (monthlyBtn) {
+                monthlyBtn.addEventListener('click', () => toggleModal('monthlyBlessingsModal', true));
+            }
+        });
+
+    </script>
+</body>
+</html>
+
 
