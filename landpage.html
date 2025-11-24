@@ -8,8 +8,8 @@
     <!-- These tags ensure when you share the link, it pulls the title, description, and image automatically -->
     <meta property="og:title" content="Liyog 2025: Divine Blessings & Wishes" />
     <meta property="og:description" content="Liyog Wishes You The Best Ever. Receive a fresh blessing for your new week. Powered by LiyX Tech." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" />
-    <meta property="og:url" content="https://liyxtech.com" /> <!-- Replace with your actual hosted URL -->
+    <meta property="og:image" content="https://snwwlewjriuqrodpjhry.supabase.co/storage/v1/object/public/product-images/1759226147127_cmx29tz1iq6_WhatsApp-Image-2025-06-23-at-11.21.38-AM.webp" />
+    <meta property="og:url" content="https://liyog-dev.github.io" /> <!-- Replace with your actual hosted URL -->
     <meta property="og:type" content="website" />
     
     <title>Liyog 2025 Blessings | LiyX Tech</title>
@@ -132,7 +132,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            pointer-events: none; /* Let clicks pass through unless on the pen itself */
+            pointer-events: auto; /* Let clicks pass through unless on the pen itself */
         }
         
         .pen-body {
@@ -145,7 +145,7 @@
 
         /* The Radiating Bottom */
         .pen-bottom {
-            width: 20px;
+            width: 50px;
             height: 20px;
             border-radius: 50%;
             background: radial-gradient(circle, #fbbc04, #ea4335, #137333);
@@ -239,10 +239,10 @@
             <!-- FEATURE IMAGE (Immediate responsive placement) -->
             <div class="mt-8 relative w-full aspect-video md:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-100 group">
                 <img 
-                    src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=2400&auto=format&fit=crop" 
-                    alt="Liyog Blessings Feature" 
-                    class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700"
-                >
+    src="https://snwwlewjriuqrodpjhry.supabase.co/storage/v1/object/public/product-images/1762505524081_n8slt5f0ycg_1761942958176.jpg" 
+    alt="Liyog Blessings Feature" 
+    class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700"
+/>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div class="absolute bottom-4 left-4 text-white">
                     <p class="font-bold text-lg"><i class="fab fa-whatsapp text-green-400"></i> LiyX Tech</p>
@@ -253,7 +253,7 @@
     </div>
 
     <!-- 3. ANIMATED PEN (Fixed Right) -->
-    <div class="magic-pen-container">
+    <div class="magic-pen-container cursor-pointer" onclick="toggleModal(true)" style="pointer-events: auto;">
         <!-- SVG Fire Tip -->
         <svg class="pen-tip-fire" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 0C8 4 4 8 4 12s4 12 8 12 8-8 8-12S16 4 12 0zm0 18c-1.5 0-3-1.5-3-3s2-4 3-6 3 4 3 6-1.5 3-3 3z"/>
@@ -268,7 +268,50 @@
     <main class="flex-grow w-full flex flex-col justify-center items-center mt-8 mb-0">
         
         <div class="w-full h-full flex flex-col">
-            
+        <!-- Live Month Button & Monthly Blessings -->
+<div class="w-full flex flex-col items-center mb-6 relative z-20">
+    <!-- Live Month Fire Button -->
+    <button class="relative bg-red-600 text-white px-8 py-3 rounded-full font-extrabold text-xl flex items-center gap-3 animate-flame shadow-xl hover:scale-105 transition transform">
+        <svg class="w-6 h-6 animate-pulse" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0C8 4 4 8 4 12s4 12 8 12 8-8 8-12S16 4 12 0z"/>
+        </svg>
+        The Month of November
+    </button>
+
+    <!-- Monthly Blessings Button with Glittering Two-Edged Sword SVG -->
+    <button id="monthlyBlessingsBtn" class="relative mt-4 px-12 py-4 font-black text-2xl flex items-center justify-center gap-2 rounded-full shadow-lg overflow-hidden transition-transform hover:scale-105">
+        <!-- SVG Blade Glitter Effect -->
+        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 80" preserveAspectRatio="none">
+            <linearGradient id="swordGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="orange" />
+                <stop offset="25%" stop-color="red" />
+                <stop offset="50%" stop-color="white" />
+                <stop offset="75%" stop-color="black" />
+                <stop offset="100%" stop-color="gold" />
+            </linearGradient>
+            <path d="M0,0 L400,0 L380,80 L20,80 Z" fill="url(#swordGradient)" />
+        </svg>
+        <!-- Colorful Text -->
+        <span class="relative z-10">
+            <span class="text-blue-400">M</span>
+            <span class="text-green-400">O</span>
+            <span class="text-red-400">N</span>
+            <span class="text-black">T</span>
+            <span class="text-orange-400">H</span> 
+            <span class="text-gold-400">L</span>
+            <span class="text-pink-400">Y</span> 
+            <span class="text-purple-400">B</span>
+            <span class="text-red-500">L</span>
+            <span class="text-green-500">E</span>
+            <span class="text-blue-500">S</span>
+            <span class="text-orange-500">S</span>
+            <span class="text-yellow-400">I</span>
+            <span class="text-purple-600">N</span>
+            <span class="text-pink-500">G</span>
+            <span class="text-red-600">S</span>
+        </span>
+    </button>
+</div>    
             <!-- Golden/Orange Border Wrapper -->
             <div class="prayer-container w-full min-h-[60vh] flex flex-col relative">
                 
@@ -397,6 +440,34 @@
         </div>
     </div>
 
+<!-- MONTHLY BLESSINGS MODAL -->
+<div id="monthlyBlessingsModal" class="fixed inset-0 z-[105] hidden">
+    <!-- Overlay -->
+    <div class="absolute inset-0 modal-overlay" onclick="toggleMonthlyModal(false)"></div>
+
+    <!-- Bottom Sheet -->
+    <div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-[2.5rem] p-8 md:p-12 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] transform translate-y-full transition-transform duration-300 bottom-sheet">
+        <div class="w-16 h-2 bg-gray-300 rounded-full mx-auto mb-6"></div>
+
+        <div class="text-center mb-8">
+            <h3 id="monthlyBlessingTitle" class="text-3xl font-black text-gray-800 mb-2">Monthly Blessings</h3>
+            <p id="monthlyBlessingBody" class="text-gray-600 text-lg max-w-3xl mx-auto">
+                May this month shower you with abundance, joy, and unstoppable breakthroughs. 
+                Open your heart and receive divine favor in every area of your life.
+            </p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+            <button onclick="shareMonthlyBlessing()" class="w-full bg-green-600 text-white font-bold py-4 rounded-xl text-center hover:brightness-110 transition shadow-lg">
+                <i class="fas fa-share-alt mr-2"></i> Share Blessing
+            </button>
+            <button onclick="toggleMonthlyModal(false)" class="w-full bg-gray-200 text-gray-700 font-bold py-4 rounded-xl text-center hover:bg-gray-300 transition">
+                Close
+            </button>
+        </div>
+    </div>
+</div>
+
     <!-- Toast Notification -->
     <div id="toast" class="fixed bottom-24 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-8 py-4 rounded-lg shadow-2xl transition-all duration-300 opacity-0 translate-y-10 pointer-events-none flex items-center gap-3 z-[200]">
         <i class="fas fa-check-circle text-green-400"></i>
@@ -492,6 +563,65 @@
             }
         }
 
+// --- MONTHLY BLESSINGS MODAL ---
+document.getElementById('monthlyBlessingsBtn').addEventListener('click', () => {
+    toggleMonthlyModal(true);
+});
+
+// Toggle Monthly Modal
+function toggleMonthlyModal(show) {
+    const modal = document.getElementById('monthlyBlessingsModal');
+    const sheet = modal.querySelector('.bottom-sheet');
+    if (show) {
+        modal.classList.remove('hidden');
+        setTimeout(() => sheet.classList.remove('translate-y-full'), 10);
+    } else {
+        sheet.classList.add('translate-y-full');
+        setTimeout(() => modal.classList.add('hidden'), 300);
+    }
+}
+
+// Share Monthly Blessing
+function shareMonthlyBlessing() {
+    const title = document.getElementById('monthlyBlessingTitle').innerText;
+    const body = document.getElementById('monthlyBlessingBody').innerText;
+    if (navigator.share) {
+        navigator.share({
+            title: 'Liyog 2025 Monthly Blessings',
+            text: `${title}\n\n${body}\n\nCheck it out here:`,
+            url: window.location.href,
+        }).catch(err => console.log('Error sharing', err));
+    } else {
+        navigator.clipboard.writeText(`${title}\n${body} - Liyog 2025`);
+        showToast("Monthly blessing copied!");
+    }
+}
+
+// --- Dynamic Open Graph Update for Current Prayer ---
+function updateOpenGraph(title, description, image) {
+    document.querySelector('meta[property="og:title"]').setAttribute("content", title);
+    document.querySelector('meta[property="og:description"]').setAttribute("content", description);
+    document.querySelector('meta[property="og:image"]').setAttribute("content", image);
+}
+
+// Update OG dynamically when prayer changes
+function changePrayer(type) {
+    const content = document.getElementById('prayer-content');
+    const pData = prayers[type];
+    content.style.opacity = '0';
+    setTimeout(() => {
+        document.getElementById('prayer-title').innerHTML = pData.title;
+        document.getElementById('prayer-body').innerHTML = pData.body;
+        document.getElementById('prayer-closing').innerText = pData.closing;
+        content.style.opacity = '1';
+        // Update OG
+        updateOpenGraph(
+            `Liyog 2025 - ${type.replace("_", " ").toUpperCase()}`,
+            pData.body.replace(/<[^>]*>?/gm, "") + " " + pData.closing,
+            document.querySelector(".wrapped-wrapper img").src
+        );
+    }, 500);
+}
         function showToast(message) {
             const toast = document.getElementById('toast');
             const toastMsg = document.getElementById('toastMsg');
@@ -504,3 +634,6 @@
     </script>
 </body>
 </html>
+
+
+
